@@ -1,0 +1,4 @@
+ord_dt,ord_gno_brno,odno,ord_dvsn_name,sll_buy_dvsn_cd,sll_buy_dvsn_cd_name,pdno,prdt_name,ord_qty,ord_tmd,tot_ccld_qty,avg_prvs,tot_ccld_amt,ord_dvsn_cd,account_id
+20240607,00950,0000014721,시장가,01,매도,000990,DB하이텍,103,134445,103,43480,4478500,01,1
+20240607,00950,0000014722,시장가,01,매도,093370,후성,2116,134446,2116,7448,15760220,01,1
+20240607,00950,0000014723,시장가,01,매도,118990,모트렉스,470,134447,470,13470,6330900,01,1

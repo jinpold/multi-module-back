@@ -1,0 +1,3 @@
+ord_dt,ord_gno_brno,odno,ord_dvsn_name,sll_buy_dvsn_cd,sll_buy_dvsn_cd_name,pdno,prdt_name,ord_qty,ord_tmd,tot_ccld_qty,avg_prvs,tot_ccld_amt,ord_dvsn_cd,account_id,trade_type
+20240613,00950,0000003857,시장가,02,매수,093370,후성,6141,100755,6141,8096,49718160,01,8,ai
+20240613,00950,0000003865,시장가,02,매수,010120,LS ELECTRIC,257,100806,257,192890,49572800,01,8,ai
