@@ -16,8 +16,6 @@ public interface ArticleService extends CommandService<ArticleDto>, QueryService
                 .content(dto.getContent())
                 .writer(adminModel)
                 .boardModel(boardModel)
-//                .writer(userRepository.findById(dto.getBoardId()).orElse(null))
-//                .board(boardRepository.findById(dto.getBoardId()).orElse(null))
                 .build();
     }
     default ArticleDto entityToDto(ArticleModel ent) {

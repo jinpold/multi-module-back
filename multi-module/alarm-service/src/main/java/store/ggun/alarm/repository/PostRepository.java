@@ -7,5 +7,4 @@ import store.ggun.alarm.domain.model.PostModel;
 
 @Repository
 public interface PostRepository extends ReactiveMongoRepository<PostModel, String> {
-//    Flux<PostModel> findByPostId (String postId);
 }

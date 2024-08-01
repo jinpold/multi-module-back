@@ -18,7 +18,7 @@ public class CorsConfig {
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
         // 명확히 도메인 지정
-        config.setAllowedOrigins(Arrays.asList("http://localhost:8080", "http://yourdomain.com"));
+        config.setAllowedOrigins(Arrays.asList("http://localhost:8000", "http://yourdomain.com"));
         config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

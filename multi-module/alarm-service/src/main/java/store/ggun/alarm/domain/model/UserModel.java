@@ -21,7 +21,5 @@ public class UserModel {
     String email;
     String password ;
     String profile;
-
     List <RoleModel> roles ;
-
 }

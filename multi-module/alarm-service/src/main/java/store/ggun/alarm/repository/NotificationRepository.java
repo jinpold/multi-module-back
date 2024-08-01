@@ -7,5 +7,5 @@ import store.ggun.alarm.domain.model.NotificationModel;
 
 @Repository
 public interface NotificationRepository extends ReactiveMongoRepository<NotificationModel, String> {
-    Flux<NotificationModel> findByUserId (String userId);
+    Flux<NotificationModel> findByAdminId(String adminId);
 }

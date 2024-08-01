@@ -21,6 +21,7 @@ public class BoardModel extends BaseEntity {
     @OneToMany(mappedBy = "boardModel" , fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<ArticleModel> articleModel;
     @Builder(builderMethodName = "builder")
+
     public BoardModel(Long id, String title, String description, String content) {
         this.id = id;
         this.title = title;

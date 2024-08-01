@@ -1,5 +1,4 @@
 package store.ggun.admin.common.junit;
-import store.ggun.admin.domain.model.Item;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

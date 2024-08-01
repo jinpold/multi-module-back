@@ -11,7 +11,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString(exclude = {"id"})
-//@Entity(name = "emails")
+@Entity(name = "emails")
 @AllArgsConstructor
 @Builder
 public class EmailModel {

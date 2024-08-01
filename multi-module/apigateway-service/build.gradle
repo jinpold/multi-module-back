@@ -60,7 +60,13 @@ dependencies {
 	implementation('org.springframework.cloud:spring-cloud-starter-bootstrap')
 
 	//swagger
-	implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.5.0'}
+	implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.5.0'
+
+    // redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+}
 
 
 dependencyManagement {

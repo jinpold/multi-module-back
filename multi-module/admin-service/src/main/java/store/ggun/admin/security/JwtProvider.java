@@ -23,16 +23,6 @@ public class JwtProvider {
     private String issuer;
     private final SecretKey secretKey;
 
-//    public enum TokenType{REFRESH,ACCESS}
-//
-//    public TokenVo makeToken(UserDto userDto){
-//        return TokenVo.builder()
-//                .email(userDto.getUsername())
-//                .role(userDto.getJob())
-//                .refreshToken(createToken(userDto,Arrays.asList(userDto.getJob()),TokenType.REFRESH))
-//                .accessToken(createToken(userDto, Arrays.asList(userDto.getJob()),TokenType.ACCESS))
-//                .build();
-//    }
 
     public JwtProvider(@Value("${jwt.secret}") String secretKey) {
         this.secretKey = Keys.hmacShaKeyFor(Decoders.BASE64URL.decode(secretKey));
@@ -44,7 +34,6 @@ public class JwtProvider {
         String accessToken = Jwts.builder()
                 .issuer(issuer)
                 .signWith(secretKey)
-//                .expiration(Date.from((tokenType.equals(TokenType.ACCESS))?Instant.now().plus(1, ChronoUnit.DAYS):Instant.now().plus(1, ChronoUnit.MINUTES)))
                 .expiration(Date.from(expiredDate))
                 .claim("sub", "turing")
                 .claim("username", adminDto.getUsername())
@@ -56,23 +45,6 @@ public class JwtProvider {
         return accessToken;
 
     }
-//
-//    public String createUserToken(UserDto userDtDo){
-//
-//        String accessToken = Jwts.builder()
-//                .issuer(issuer)
-//                .signWith(secretKey)
-//                .expiration(Date.from(expiredDate))
-//                .claim("sub", "turing")
-//                .claim("username", userDtDo.getUsername())
-//                .claim("userId", userDtDo.getId())
-//                .compact();
-//
-//        log.info("로그인 성공으로 발급된 토큰 : " + accessToken);
-//        return accessToken;
-//
-//    }
-
 
     public String extractTokenFromHeader(HttpServletRequest request) {
         log.info("프론트에서 넘어온 리퀘스트 값 : {}", request.getServletPath());

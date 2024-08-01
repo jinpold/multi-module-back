@@ -40,7 +40,6 @@ public class JwtProvider {
     }
 
 
-
     public boolean isTokenValid(String jwt){
         return !isTokenExpired(jwt);
     }
@@ -58,8 +57,6 @@ public class JwtProvider {
                 .expiration(Date.from(Instant.now().plusSeconds(isRefreshToken.equals("accessToken") ? accessTokenExpiration : refreshTokenExpiration )))
                 .signWith(getSigningKey(), Jwts.SIG.HS256)
                 .compact();
-
-
 
     }
 
@@ -84,6 +81,5 @@ public class JwtProvider {
         byte[] bytes = Decoders.BASE64.decode(secretKey);
         return Keys.hmacShaKeyFor(bytes);
     }
-
 
 }

@@ -1,5 +1,4 @@
 package store.ggun.admin.controller;
-
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
@@ -8,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import store.ggun.admin.domain.dto.AdminDto;
 import store.ggun.admin.domain.model.Messenger;
-import store.ggun.admin.repository.jpa.AdminRepository;
 import store.ggun.admin.service.AdminService;
 
 
@@ -22,7 +20,7 @@ import store.ggun.admin.service.AdminService;
 @Slf4j
 public class AdminAuthController {
     private final AdminService service;
-    private final AdminRepository adminRepository;
+
 
     // -----------------------------------Query ---------------------------------------
 

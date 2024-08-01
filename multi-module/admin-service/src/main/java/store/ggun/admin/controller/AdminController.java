@@ -2,7 +2,6 @@ package store.ggun.admin.controller;
 import store.ggun.admin.domain.model.Messenger;
 import store.ggun.admin.domain.model.AdminModel;
 import store.ggun.admin.domain.dto.AdminDto;
-import store.ggun.admin.repository.jpa.AdminRepository;
 import store.ggun.admin.service.AdminService;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -23,8 +22,8 @@ import java.util.*;
 @RequestMapping
 @Slf4j
 public class AdminController {
+
     private final AdminService service;
-    private final AdminRepository adminRepository;
 
     // ---------------------------------Command---------------------------------------
     @SuppressWarnings("static-access")

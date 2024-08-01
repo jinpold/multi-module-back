@@ -58,26 +58,6 @@ public class TransactionDaoImpl implements TransactionDao {
 
 
     @Override
-    public Long getTransactionsById() {
-        return jpaQueryFactory
-                .select(transaction.id)
-                .from(transaction)
-                .orderBy(transaction.id.desc())
-                .fetchFirst();
-    }
-
-
-
-    @Override
-    public List<String> getTransactionsByUsername() {
-        return jpaQueryFactory
-                .select(transaction.username)
-                .from(transaction)
-                .orderBy(transaction.username.desc())
-                .fetch();
-    }
-
-    @Override
     public Map<String, Double> getTotalByDate() {
         // tradeTotal을 Double로 변환
         NumberExpression<Double> tradeTotalAsDouble = Expressions.numberTemplate(Double.class, "CAST({0} AS DOUBLE)", transaction.tradeTotal);
@@ -114,12 +94,6 @@ public class TransactionDaoImpl implements TransactionDao {
                 ));
     }
 
-
-    @Override
-    public List<TransactionDto> getTransactionsByNetProfit() {
-        return List.of();
-    }
-
     @Override
     public Map<String, Map<String, Integer>> getQuantityByDate() {
 
@@ -142,5 +116,4 @@ public class TransactionDaoImpl implements TransactionDao {
                         }
                 ));
     }
-
 }

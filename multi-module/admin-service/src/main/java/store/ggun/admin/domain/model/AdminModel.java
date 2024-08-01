@@ -9,7 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-@ToString(exclude = {"articles", "id"})
+@ToString(exclude = {"id"})
 @AllArgsConstructor
 public class AdminModel extends BaseEntity {
 

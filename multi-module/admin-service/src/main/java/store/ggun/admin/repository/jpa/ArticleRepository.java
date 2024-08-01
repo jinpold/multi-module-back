@@ -9,7 +9,6 @@ import java.util.List;
 @Repository
 public interface ArticleRepository extends JpaRepository<ArticleModel, Long> {
 
-    // JPQL Default 방식
     @Query("select a "
             + "from articles a where a.boardModel.id = :boardId order by a.id desc")
     List<ArticleModel> getArticleByBoardId(@Param("boardId") Long boardId);

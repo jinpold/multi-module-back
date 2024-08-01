@@ -12,7 +12,7 @@ public class HomeController {
 
     public String Date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date());
 
-    @GetMapping("/api/chats/test")
+    @GetMapping("/chats/test")
     public String hello() {
         return Date + "Welcome To admin service";
     }

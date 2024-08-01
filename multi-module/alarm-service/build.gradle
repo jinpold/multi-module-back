@@ -1,3 +1,5 @@
+import javax.swing.Spring
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.1'
@@ -11,12 +13,18 @@ java {
     sourceCompatibility = '17'
 }
 
-jar {
-    enabled = false
-}
-
 repositories {
     mavenCentral()
+}
+bootJar {
+    enabled = true
+}
+
+jar{
+    enabled = false
+}
+ext {
+    set('springCloudVersion', "2023.0.2")
 }
 
 dependencies {
@@ -86,8 +94,16 @@ dependencies {
     implementation 'io.projectreactor:reactor-core'
     implementation 'com.sun.mail:jakarta.mail:2.0.1'
 
+    // config
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
 }
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
 
 // tasks.named('test') {
 // 	useJUnitPlatform()
